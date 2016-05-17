@@ -1,4 +1,6 @@
-# Boris Bikes (tutorial)
+# Boris Bikes
+
+First week project for Makers Academy.
 
 Implement a system for managing and running Boris Bikes system in London.
 
