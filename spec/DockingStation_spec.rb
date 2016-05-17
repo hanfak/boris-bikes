@@ -9,11 +9,6 @@ describe DockingStation do
 
 	describe '#release_bike' do
 		let(:bike) {double(:bike)}
-		# it "checks whether release_bike gets a bike" do
-		# allow(bike).to receive(:working?).and_return(true)
-		# 	subject.dock_bike(bike)
-		#   expect(subject.release_bike).to be_a(bike.class)
-		# end
 
 		it	'expects error when trying to release a broken bike' do
 			allow(bike).to receive(:report_broken).and_return false
@@ -23,16 +18,12 @@ describe DockingStation do
 			expect {subject.release_bike}.to raise_error(RuntimeError, "Sorry, this bike is broken")
 		end
 
-
 		it 'expects the released bike to be working' do
 			allow(bike).to receive(:working?).and_return(true)
 			subject.dock_bike(bike)
 			released_bike = subject.release_bike
 			expect(released_bike.working?).to eq (true)
 		end
-		# it 'expects error when no bikes' do
-		# 		expect {subject.release_bike}.to raise_error(RuntimeError)
-		# end
 	end
 
 	describe '#release_broken_bike' do
@@ -80,28 +71,11 @@ describe DockingStation do
 			end
 			expect(test_pass).to be true
 		end
-
   end
 
 	describe '#bikes'  do
 		it 'expect to see a bike' do
 			expect(subject.bikes).to be_a(Array)
 		end
-
 	end
-
-
-
-
-=begin
-it 'allows a capacity to be set' do
-	expect(subject.capacity=10).to eq subject.capacity
-end
-
-it 'checks whether the capacity is DEFAULT CAPACITY' do
-	expect(subject.capacity).to eq subject.class::DEFAULT_CAPACITY
-end
-
-=end
-
 end

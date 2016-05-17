@@ -1,5 +1,4 @@
 class Bike
-
 	def initialize
 		@status = true
 	end
@@ -19,5 +18,4 @@ class Bike
 	 def broken?
 		 !@status
 	end
-
 end

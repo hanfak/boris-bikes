@@ -19,5 +19,4 @@ describe Garage do
       expect(subject.bikes).to all(be_working)
     end
   end
-
 end

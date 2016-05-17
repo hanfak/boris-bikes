@@ -1,6 +1,4 @@
 module BikeContainer
-
-
   def bike_in(bike)
     @bikes << bike
   end
@@ -19,5 +17,4 @@ module BikeContainer
   def full?
 		@bikes.length >= @capacity
 	end
-
 end

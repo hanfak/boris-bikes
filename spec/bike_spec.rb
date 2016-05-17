@@ -1,6 +1,5 @@
 require 'bike'
 
-
 describe Bike do
 	describe '#working?' do
 		it { expect(subject).to respond_to :working? }
@@ -13,7 +12,6 @@ describe Bike do
 			subject.report_broken
 			expect(subject).not_to be_working
 		end
-
 	end
 
 	describe '#report_broken' do
@@ -34,8 +32,5 @@ describe Bike do
 		it 'should expect new bike to not be broken' do
 			expect(subject).not_to be_broken
 		end
-
 	end
-
-
 end
